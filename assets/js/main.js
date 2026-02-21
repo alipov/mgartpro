@@ -38,4 +38,35 @@
     }
     io.observe(el);
   });
+
+  var openers = document.querySelectorAll('[data-modal-open]');
+  var activeModal = null;
+
+  function closeModal() {
+    if (!activeModal) return;
+    activeModal.hidden = true;
+    document.body.classList.remove('modal-open');
+    activeModal = null;
+  }
+
+  openers.forEach(function (opener) {
+    opener.addEventListener('click', function () {
+      var id = opener.getAttribute('data-modal-open');
+      var modal = document.getElementById(id);
+      if (!modal) return;
+      activeModal = modal;
+      modal.hidden = false;
+      document.body.classList.add('modal-open');
+    });
+  });
+
+  document.querySelectorAll('[data-modal-close], .modal-backdrop').forEach(function (el) {
+    el.addEventListener('click', closeModal);
+  });
+
+  document.addEventListener('keydown', function (event) {
+    if (event.key === 'Escape') {
+      closeModal();
+    }
+  });
 })();

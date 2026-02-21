@@ -210,7 +210,8 @@ a:focus-visible {
   outline-offset: 3px;
 }
 
-.conductor-card img {
+.conductor-card img,
+.person-card img {
   width: 100%;
   aspect-ratio: 4 / 3;
   object-fit: cover;
@@ -225,6 +226,21 @@ a:focus-visible {
   overflow: hidden;
   clip: rect(0, 0, 0, 0);
   border: 0;
+}
+
+.card-open {
+  position: absolute;
+  inset: 0;
+  border: 0;
+  background: transparent;
+  border-radius: var(--radius);
+  cursor: pointer;
+  z-index: 2;
+}
+
+.card-open:focus-visible {
+  outline: 3px solid var(--accent);
+  outline-offset: 3px;
 }
 
 .card h3 {
@@ -368,6 +384,49 @@ a:focus-visible {
   padding: 0.5rem 0.75rem;
   background: #fff;
   border: 2px solid var(--accent);
+}
+
+.modal[hidden] {
+  display: none;
+}
+
+.modal {
+  position: fixed;
+  inset: 0;
+  z-index: 300;
+}
+
+.modal-backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.55);
+}
+
+.modal-panel {
+  position: relative;
+  width: min(92vw, 820px);
+  max-height: 88vh;
+  overflow: auto;
+  margin: 6vh auto;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 1rem 1.25rem 1.4rem;
+}
+
+.modal-close {
+  float: right;
+  border: 1px solid var(--border);
+  background: #fff;
+  border-radius: 999px;
+  width: 2rem;
+  height: 2rem;
+  cursor: pointer;
+}
+
+body.modal-open {
+  overflow: hidden;
 }
 
 @media (max-width: 860px) {
