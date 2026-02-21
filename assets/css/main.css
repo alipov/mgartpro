@@ -311,6 +311,40 @@ a:focus-visible {
   text-align: inherit;
 }
 
+.about-article h3 {
+  margin: 1.15rem 0 0.45rem;
+  font-size: 1.35rem;
+}
+
+.about-bio {
+  display: grid;
+  grid-template-columns: minmax(150px, 220px) 1fr;
+  gap: 1.25rem 1.5rem;
+  align-items: start;
+}
+
+.about-portrait img {
+  width: 100%;
+  max-width: 220px;
+  border-radius: 12px;
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow);
+}
+
+.about-content .lead {
+  margin-top: 0.2rem;
+}
+
+.about-timeline {
+  margin: 0.35rem 0 0.65rem;
+  padding-left: 1.2rem;
+}
+
+.about-timeline li {
+  margin: 0 0 0.65rem;
+  color: var(--muted);
+}
+
 .lead {
   font-size: 1.1rem;
   color: var(--muted);
@@ -465,6 +499,10 @@ body.modal-open {
 
 @media (max-width: 600px) {
   .card-grid--three {
+    grid-template-columns: 1fr;
+  }
+
+  .about-bio {
     grid-template-columns: 1fr;
   }
 }
