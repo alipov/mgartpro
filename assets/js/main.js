@@ -1,4 +1,6 @@
 (function () {
+  document.documentElement.classList.add('js');
+
   var nav = document.querySelector('[data-site-nav]');
   var button = document.querySelector('[data-menu-toggle]');
 
