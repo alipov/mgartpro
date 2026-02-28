@@ -1,22 +1,76 @@
-<html>
-
+<!doctype html>
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-<title>MG - Artists Production Management</title>
-<meta name="Microsoft Theme" content="blank 011, default">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>MG Artists Production Management</title>
+  <meta name="description" content="MG Artists Production Management: conductors, soloists, ensembles, and orchestra projects." />
+  <link rel="icon" type="image/svg+xml" href="/assets/icons/favicon.svg" />
+  <link rel="stylesheet" href="/assets/css/main.css" />
+  <script defer src="/assets/js/main.js"></script>
 </head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to content</a>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="/">MG Art Pro<small>Artists Production Management</small></a>
+      <button class="menu-toggle" data-menu-toggle aria-expanded="false" aria-controls="site-nav" aria-label="Toggle navigation">
+        <span></span><span></span><span></span>
+      </button>
+      <nav class="site-nav" data-site-nav id="site-nav" aria-label="Primary">
+        <ul>
+          <li><a data-nav-link href="/about/">About</a></li>
+          <li><a data-nav-link href="/artists/conductors/">Conductors</a></li>
+          <li><a data-nav-link href="/artists/soloists/">Soloists</a></li>
+          <li><a data-nav-link href="/ensembles/">Ensembles</a></li>
+          <li><a data-nav-link href="/orchestras/">Orchestras</a></li>
+          <li><a data-nav-link href="/contact/">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
 
-<frameset framespacing="0" border="0" rows="51,*" frameborder="0">
-  <frame name="header" scrolling="no" noresize target="main" src="indexup.html">
-  <frame name="main" src="index1.html" target="_self">
-  <noframes>
-  <body background="_themes/blank/blbkgnd.html" bgcolor="#FFFFFF" text="#000000" link="#999999" vlink="#990000" alink="#666666"><!--mstheme--><font face="Arial">
+  <main id="main-content" class="container">
+    <section class="hero reveal">
+      <h1>Classical Artists. Global Stages.</h1>
+      <p>
+        MG Artists Production Management curates conductor, soloist, and orchestra collaborations,
+        connecting exceptional musicians with presenters and audiences.
+      </p>
+    </section>
 
-  <p>This page uses frames, but your browser doesn't support them.</p>
+    <section class="page-section">
+      <h2>Roster and Projects</h2>
+      <div class="card-grid">
+        <article class="card reveal">
+          <h3>Conductors</h3>
+          <p>Explore conductor profiles, biographies, and performance highlights.</p>
+          <a class="btn-link" href="/artists/conductors/">View conductors</a>
+        </article>
+        <article class="card reveal">
+          <h3>Soloists</h3>
+          <p>Read about featured soloists and watch selected performance videos.</p>
+          <a class="btn-link" href="/artists/soloists/">View soloists</a>
+        </article>
+        <article class="card reveal">
+          <h3>Ensembles</h3>
+          <p>Discover chamber groups and collaborative ensemble projects.</p>
+          <a class="btn-link" href="/ensembles/">View ensembles</a>
+        </article>
+        <article class="card reveal">
+          <h3>Orchestras</h3>
+          <p>Explore major orchestral initiatives and featured projects.</p>
+          <a class="btn-link" href="/orchestras/">View orchestras</a>
+        </article>
+      </div>
+    </section>
 
-  <!--mstheme--></font></body>
-  </noframes>
-</frameset>
+  </main>
 
-
+  <footer class="site-footer">
+    <div class="container">
+      <p>MG Artists Production Management</p>
+    </div>
+  </footer>
+</body>
 </html>
