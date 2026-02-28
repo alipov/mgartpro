@@ -345,6 +345,51 @@ a:focus-visible {
   color: var(--muted);
 }
 
+.conductor-detail {
+  max-width: 920px;
+  margin: 0 auto;
+}
+
+.conductor-detail table,
+.conductor-detail tbody,
+.conductor-detail tr,
+.conductor-detail td {
+  display: block;
+  width: 100% !important;
+  height: auto !important;
+}
+
+.conductor-detail td {
+  padding: 0.25rem 0 !important;
+  border: 0 !important;
+}
+
+.conductor-detail img {
+  display: block;
+  width: min(100%, 360px) !important;
+  max-width: min(100%, 460px);
+  margin: 0.45rem auto 1rem;
+  height: auto !important;
+}
+
+.conductor-detail img[align="left"],
+.conductor-detail img[align="right"] {
+  float: none !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+
+.conductor-detail iframe {
+  display: block;
+  width: min(100%, 760px);
+  margin: 0.5rem auto 1rem;
+  min-height: 320px;
+}
+
+.conductor-detail p {
+  line-height: 1.72;
+}
+
 .lead {
   font-size: 1.1rem;
   color: var(--muted);
