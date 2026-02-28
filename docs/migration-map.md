@@ -90,10 +90,10 @@
 | /soloists.html | /artists/soloists/ |
 | /ensambles.html | /ensembles/ |
 | /orchestras.html | /orchestras/ |
-| /ashdodfestival.html | /orchestras/ashdod-festival/ |
-| /nso.html | /orchestras/new-symphony-orchestra-israel/ |
+| /ashdodfestival.html | (removed) |
+| /nso.html | (removed) |
 | /nsoru.html | /orchestras/new-symphony-orchestra-israel-ru/ |
-| /nsomusicians.html | /orchestras/new-symphony-orchestra-israel/musicians/ |
+| /nsomusicians.html | /orchestras/nso-musicians/ |
 | /rachlin.html | /artists/conductors/julian-rachlin/ |
 | /sanderling.html | /artists/conductors/thomas-sanderling/ |
 | /alvarez.html | /artists/conductors/cesar-alvarez/ |
@@ -125,9 +125,7 @@
 - dmytro-logvin
 
 ### Orchestra pages
-- new-symphony-orchestra-israel
 - new-symphony-orchestra-israel-ru
-- ashdod-festival
 
 ## Content Blocks To Preserve
 - Home identity/logo visuals from legacy landing.

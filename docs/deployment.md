@@ -28,10 +28,8 @@
 - /artists/soloists/
 - /ensembles/
 - /orchestras/
-- /orchestras/new-symphony-orchestra-israel/
-- /orchestras/new-symphony-orchestra-israel/musicians/
+- /orchestras/nso-musicians/
 - /orchestras/new-symphony-orchestra-israel-ru/
-- /orchestras/ashdod-festival/
 - /contact/
 
 ## SEO Assets
