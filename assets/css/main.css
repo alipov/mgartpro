@@ -458,6 +458,41 @@ a:focus-visible {
   line-height: 1.72;
 }
 
+.profile-detail {
+  max-width: 980px;
+}
+
+.profile-intro {
+  display: grid;
+  grid-template-columns: minmax(220px, 320px) 1fr;
+  gap: var(--space-5);
+  align-items: center;
+  margin-bottom: var(--space-4);
+}
+
+.profile-intro img {
+  width: 100% !important;
+  max-width: 320px;
+  margin: 0 !important;
+}
+
+.profile-intro h1 {
+  margin: 0 0 var(--space-2);
+  font-size: clamp(2rem, 4vw, 3rem);
+}
+
+.eyebrow {
+  margin: 0 0 var(--space-1);
+  color: var(--accent);
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.profile-copy {
+  max-width: 84ch;
+}
+
 .lead {
   font-size: 1.1rem;
   color: var(--muted);
@@ -616,6 +651,10 @@ body.modal-open {
   }
 
   .about-bio {
+    grid-template-columns: 1fr;
+  }
+
+  .profile-intro {
     grid-template-columns: 1fr;
   }
 
