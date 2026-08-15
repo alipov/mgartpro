@@ -196,6 +196,7 @@ a:focus-visible {
 
 .card-link {
   position: relative;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease;
 }
 
 .card-hit {
@@ -210,11 +211,70 @@ a:focus-visible {
   outline-offset: 3px;
 }
 
+.card-link:hover,
+.card-link:focus-within {
+  border-color: rgba(139, 34, 50, 0.42);
+  box-shadow: 0 16px 34px rgba(29, 34, 41, 0.14);
+  transform: translateY(-2px);
+}
+
+.card-link h2,
+.card-link h3 {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: var(--space-3);
+}
+
+.card-link h2::after,
+.card-link h3::after {
+  content: "→";
+  flex: 0 0 auto;
+  color: var(--accent);
+  font-family: "Source Sans 3", sans-serif;
+  font-size: 0.75em;
+  opacity: 0.72;
+  transform: translateX(-2px);
+  transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+.card-link:hover h2,
+.card-link:hover h3,
+.card-link:focus-within h2,
+.card-link:focus-within h3 {
+  color: var(--accent);
+}
+
+.card-link:hover h2::after,
+.card-link:hover h3::after,
+.card-link:focus-within h2::after,
+.card-link:focus-within h3::after {
+  opacity: 1;
+  transform: translateX(2px);
+}
+
 .conductor-card img,
 .person-card img {
   width: 100%;
   aspect-ratio: 4 / 3;
   object-fit: cover;
+}
+
+.card-meta {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 0.15rem;
+}
+
+.card-meta h3 {
+  margin: 0;
+}
+
+.card-credit {
+  font-size: 0.72rem;
+  color: var(--muted);
+  line-height: 1.2;
 }
 
 .sr-only {
@@ -311,6 +371,10 @@ a:focus-visible {
   text-align: inherit;
 }
 
+.page-section > .article + .article {
+  margin-top: var(--space-4);
+}
+
 .about-article h3 {
   margin: 1.15rem 0 0.45rem;
   font-size: 1.35rem;
@@ -342,6 +406,27 @@ a:focus-visible {
 
 .about-timeline li {
   margin: 0 0 0.65rem;
+  color: var(--muted);
+}
+
+.mission-vision {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: var(--space-5);
+}
+
+.home-about {
+  display: grid;
+  gap: var(--space-3);
+}
+
+.home-about h2 {
+  margin-bottom: 0;
+}
+
+.home-about p {
+  max-width: 78ch;
+  margin-bottom: 0;
   color: var(--muted);
 }
 
@@ -388,6 +473,56 @@ a:focus-visible {
 
 .conductor-detail p {
   line-height: 1.72;
+}
+
+.profile-detail {
+  max-width: 980px;
+}
+
+.profile-intro {
+  display: grid;
+  grid-template-columns: minmax(220px, 320px) 1fr;
+  gap: var(--space-5);
+  align-items: center;
+  margin-bottom: var(--space-4);
+}
+
+.profile-intro img {
+  width: 100% !important;
+  max-width: 320px;
+  margin: 0 !important;
+}
+
+.profile-media {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  max-width: 320px;
+}
+
+.photo-credit {
+  font-size: 0.75rem;
+  color: var(--muted);
+  margin-top: 0.35rem;
+  font-style: normal;
+  letter-spacing: 0.02em;
+}
+
+.profile-intro h1 {
+  margin: 0 0 var(--space-2);
+  font-size: clamp(2rem, 4vw, 3rem);
+}
+
+.eyebrow {
+  margin: 0 0 var(--space-1);
+  color: var(--accent);
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.profile-copy {
+  max-width: 84ch;
 }
 
 .lead {
@@ -548,6 +683,14 @@ body.modal-open {
   }
 
   .about-bio {
+    grid-template-columns: 1fr;
+  }
+
+  .profile-intro {
+    grid-template-columns: 1fr;
+  }
+
+  .mission-vision {
     grid-template-columns: 1fr;
   }
 }
