@@ -639,6 +639,14 @@ a:focus-visible {
   cursor: pointer;
 }
 
+/* Contact grid for two columns */
+.contact-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: var(--space-4);
+  margin-top: var(--space-3);
+}
+
 body.modal-open {
   overflow: hidden;
 }
