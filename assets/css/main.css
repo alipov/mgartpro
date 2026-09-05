@@ -600,6 +600,46 @@ a:focus-visible {
   border: 2px solid var(--accent);
 }
 
+.breadcrumb {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-size: 0.88rem;
+  letter-spacing: 0.03em;
+  color: var(--muted);
+  margin-top: 0.5rem;
+  margin-bottom: 2rem;
+  padding: 0.45rem 1rem;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+  width: fit-content;
+}
+
+.breadcrumb a {
+  color: var(--accent);
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.15s ease;
+}
+
+.breadcrumb a:hover {
+  color: #5f1320;
+  text-decoration: underline;
+}
+
+.breadcrumb .separator {
+  color: var(--border);
+  font-size: 0.85em;
+  user-select: none;
+}
+
+.breadcrumb .current {
+  color: var(--text);
+  font-weight: 500;
+}
+
 .modal[hidden] {
   display: none;
 }
